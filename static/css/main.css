@@ -1,5 +1,5 @@
 :root {
-  --content-width: 810px;
+  --content-width: 80vw;
 
   --light-primary-color: 255, 255, 255;
   --light-secondary-color: #dddddd;
@@ -77,6 +77,7 @@ img {
 .header .header-nav {
   height: 50px;
   margin-top: 0;
+  overflow: hidden;
 }
 
 .header-nav .avatar {
@@ -101,6 +102,7 @@ img {
 }
 .nav-title a {
   height: 50px;
+  transition: all 0.3s linear;
 }
 .header-nav .nav-links {
   float: right;
@@ -110,16 +112,20 @@ img {
 .nav-links .nav-link {
   display: inline-block;
   padding: 0 2px;
+  overflow: hidden;
 }
 .nav-links .nav-link a {
+  float: left;
   display: block;
   padding: 0 6px;
+  transition: all 0.3s linear;
 }
 .nav-link a svg {
   height: 20px;
   margin: -3px auto;
   stroke-width: 2;
   width: 20px;
+  transition: all 0.3s linear;
 }
 .nav-links .nav-link.icon a {
   padding: 0 8px;
@@ -134,9 +140,47 @@ img {
   cursor: pointer;
 }
 
+.nav-links .sub-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  transition: 3s linear;
+}
+
+.nav-links .sub-menu a{
+  float: none;
+  text-align: left;
+  display: block;
+  padding: 0 6px;
+}
+
+.nav-links .nav-link:hover .sub-menu {
+  display: block;
+  float: center;
+  max-width:min-content;
+  line-height: 20px;
+  padding-left: 0;
+}
+
+.nav-link:hover ul.sub-menu {
+  margin-top: 0px;
+  display: block;
+  top: 50px;
+}
+
+
+.nav-links .nav-link:hover .sub-menu a{
+  padding: 0px 6px;
+}
+
+
 a:hover .feather-sun {
   fill: black;
   color: black;
+}
+.nav-link li {
+  list-style-type: none;
 }
 
 .dark-theme-toggle .feather {
@@ -429,7 +473,7 @@ h1.main-page-name:before {
 h1.main-page-name:hover:after,
 h1.main-page-name:hover:before {
   opacity: 1;
-  transform: translate3d(20em,2em,0);
+  transform: translate3d(31vw,2em,0);
 }
 
 /* LIST */
@@ -510,6 +554,11 @@ h1.main-page-name:hover:before {
 
   #hamburger-menu-toggle {
     display: inline-block;
+  }
+
+
+  .nav-link:hover .sub-menu {
+    display: block;
   }
 
   main#content {
