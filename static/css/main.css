@@ -126,6 +126,8 @@ img {
   stroke-width: 2;
   width: 20px;
   transition: all 0.3s linear;
+  -webkit-transition: all 3s linear;
+  -o-transition: all 3s linear;
 }
 .nav-links .nav-link.icon a {
   padding: 0 8px;
@@ -146,6 +148,8 @@ img {
   width: 100%;
   z-index: 1;
   transition: 3s linear;
+  -webkit-transition: all 3s linear;
+  -o-transition: all 3s linear;
 }
 
 .nav-links .sub-menu a{
@@ -179,9 +183,11 @@ a:hover .feather-sun {
   fill: black;
   color: black;
 }
-.nav-link li {
+
+.nav-links li, ul.sub-menu, ul li, .nav-links:after {
   list-style-type: none;
 }
+
 
 .dark-theme-toggle .feather {
   height: 22px;
