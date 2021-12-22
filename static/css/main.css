@@ -440,6 +440,8 @@ table td {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  height: 20em;
+  display: inline-block;
 }
 hr {
   max-width: 20em;
